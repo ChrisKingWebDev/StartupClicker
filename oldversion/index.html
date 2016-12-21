@@ -1,0 +1,76 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="interface.css" />
+	</head>
+	<body>		
+		<div id="actionsPanel">
+			<button id="goAlpha" onclick="goAlpha()" class="disabled">Launch Alpha <span id="alphaCost">500 Tech</span></button>
+			<button id="goBeta" onclick="goBeta()" class="disabled" style="display:none;">Launch Beta <span id="betaCost">2,500 Tech, 2,500 Design</span></button>
+			<button id="goLive" onclick="goLive()" class="disabled" style="display:none;">Launch Site Live <span id="liveCost">10,000 Tech, 10,000 Design, 10,000 Buzz</span></button>
+		</div>
+		<div id="messagePanel">
+		</div>
+		<div id="actionButtons">
+		<button id="codeClick" onclick="codeClick()">Code</button>
+		<button id="designClick" onclick="designClick()" style="display:none;">Design</button>
+		<button id="marketingClick" onclick="marketingClick()" style="display:none;">Marketing</button>
+		<button id="inviteClick" onclick="inviteClick()" style="display:none;">Invite</button>
+		</div>
+		<div id="usersPanel" style="display:none;">
+			Users: <span id="users">0</span>
+		</div>
+		<div id="moneyPanel" style="display:none;">
+			Money: <span id="money">$0</span><br/>
+			Money Per User  <span id="moneyPerUser">$0.01</span>
+		</div>
+		<br />
+		<div id="resoursePanels">
+			<div id="techPanel" class="resoursePanel">
+			Tech: <span id="tech">0</span><br/>
+			<br />
+			<button id="hireCoder" onclick="hireCoder()" class="disabled">Hire Coder: <span id="coderCost" class="cost">50 Tech</span></button>
+			<br />
+			Coders: <span id="coders">0</span> 
+			</div>
+			<div id="designPanel" class="resoursePanel" style="display:none;">
+			Design: <span id="design">0</span><br/>
+			<br />
+			<button id="hireDesigner" onclick="hireDesigner()" class="disabled">Hire Designer: <span id="designerCost" class="cost">50 Design</span></button>
+			<br />
+			Designers: <span id="designers">0</span> 
+			</div>
+			<div id="buzzPanel" class="resoursePanel" style="display:none;">
+			Buzz: <span id="buzz">0</span><br/>
+			<br />
+			<button id="hireMarketer" onclick="hireMarketer()" class="disabled">Hire Marketer: <span id="marketerCost" class="cost">50 Buzz</span></button>
+			<br />
+			Marketers: <span id="marketers">0</span> 
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div id="assetsPanels">
+			<div id="officePanel" class="assetPanel">
+				Current Office: <span id="currentOffice">Living Room</span><br/>
+				Vacant Office Space: <span id="officeSpace">3</span>
+				<div id="officeButtons">
+					<button id="buyGarage" onclick="buyGarage()" class="disabled">Move Into Garage<span class="desc">+3 Office Space</span></button><br/>
+					<button id="buyHouse" onclick="buyHouse()" class="disabled" style="display:none;">Move Into Grandma's House<span class="desc">+10 Office Space</span></button>
+					<button id="buyOffice" onclick="buyOffice()" class="disabled" style="display:none;">Move Into Office<span id="officeCost" class="cost">$100</span><span class="desc">+25 Office Space</span></button>
+				</div>
+			</div>
+			<div id="officePanel" class="assetPanel">
+				Servers: <span id="servers">1</span><br/>
+				Tech Storage Per Servers: <span id="techPerServer">100</span><br/>
+				Total Server Space: <span id="totalServerSpace">100</span><br/>
+				<div id="serverButtons">
+					<button id="buyServer" onclick="buyServer()" class="disabled">Buy Server: <span id="serverCost" class="cost">100 Tech</span></button><br/>
+					<button id="upgradeServers" onclick="upgradeServers()" class="disabled">Upgrade Servers: <span id="serverUpgradeCost" class="cost">500 Tech</span></button>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/numeral.js/1.4.5/numeral.min.js"></script>
+		<script type="text/javascript" src="js.js"></script>
+	</body>
+</html>

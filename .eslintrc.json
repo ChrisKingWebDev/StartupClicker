@@ -1,0 +1,185 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "plugins": [
+        "react"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "es6": true
+    },
+    "globals": {
+        "SP": false,
+        "_spPageContextInfo": false,
+        "Microsoft": false,
+        "ga": false
+    },
+    "rules": {
+        //disallow use of console (disabled)
+        "no-console": 0,
+
+        //space indentation
+        "indent": [
+            1,
+            4,
+            {
+                "SwitchCase": 1
+            }
+        ],
+
+        "react/jsx-indent": [
+            1
+        ],
+
+        //linebreak style
+        "linebreak-style": [
+            2,
+            "unix"
+        ],
+
+        //quote style
+        "quotes": [
+            1,
+            "double"
+        ],
+
+        //semi-colon at end of line
+        "semi": [
+            1,
+            "always"
+        ],
+
+        //getter/setter pairs in objects
+        "accessor-pairs": [
+            1,
+            {
+                "getWithoutSet": true,
+                "setWithoutGet": true
+            }
+        ],
+
+        //maximum cyclomatic complexity allowed in a program
+        "complexity": [
+            1,
+            8
+        ],
+
+        //require use of === and !== over == and !=
+        "eqeqeq": [
+            1,
+            "smart"
+        ],
+
+        //enforce consistent braces
+        "brace-style": [
+            1,
+            "1tbs", //1tbs - closing if bracket on same line as else
+            {
+                "allowSingleLine": true
+            }
+        ],
+
+        //enforce camelCase (ignores CONSTANTS)
+        "camelcase": 2,
+
+        //enforce comma at end of line for lists (vs at the start of the next line)
+        "comma-style": 1,
+
+        //Enforce require at top-level module scope
+        "global-require": 2,
+
+        //Do not allow an if to be the only statement inside an else
+        "no-lonely-if": 2,
+
+        //Maximum number of continuous blank lines
+        "no-multiple-empty-lines": [
+            1,
+            {
+                "max": 2,
+                "maxEOF": 1, //do not allow more than 1 empty line at end of file
+                "maxBOF": 0  //do not allow any blank lines at start of file
+            }
+        ],
+
+        //Do not allow nested ternary issues
+        "no-nested-ternary": 2,
+
+        //Allow space between function name and parentheses
+        "no-spaced-func": 0,
+
+        //Disallow trailing spaces
+        "no-trailing-spaces": 1,
+
+        //Disallow whitespace before property (e.g. `foo .bar`)
+        "no-whitespace-before-property": 1,
+
+        //Object properties all must be on newlines
+        "object-property-newline": [
+            1,
+            {
+                "allowMultiplePropertiesPerLine": true //allow when all properties in an object literal are on the same line
+            }
+        ],
+
+        //Enforce space before blocks
+        "space-before-blocks": [
+            1,
+            "always"
+        ],
+
+        //Enforce space between function and parentheses
+        "space-before-function-paren": [
+            1,
+            "never"
+        ],
+
+        //Force space around operations (e.g. +, -, =, etc)
+        "space-infix-ops": 1,
+
+        //Enforce space between unary operators
+        "space-unary-ops": [
+            1,
+            {
+                "words": true,
+                "nonwords": false
+            }
+        ],
+
+        //Enforce parentheses on arrow functions
+        "arrow-parens": 2,
+
+        //Require space before/after arrow function’s arrow
+        "arrow-spacing": 1,
+
+        //Disallow arrow functions where they could be confused with comparisons (e.g. let x = a => 1 ? 2 : 3;
+        "no-confusing-arrow": 2,
+
+        //disallow duplicate imports
+        "no-duplicate-imports": 2,
+
+        //disallow `var` in favor of `const` and `var
+        "no-var": 2,
+
+        //Force use of object literal shorthand
+        "object-shorthand": 2,
+
+        //force using arrow functions in callbacks
+        "prefer-arrow-callback": 2,
+
+        //enforce consistent spacing before and after keywords
+        "keyword-spacing": 1,
+
+        "no-case-declarations": 0
+
+    }
+}

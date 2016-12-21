@@ -1,0 +1,71 @@
+.App {
+}
+
+.App-header {
+  text-align: center;
+  background-color: #222;
+  padding: 20px;
+  color: white;
+}
+
+.container {
+  width: 100%;
+  max-width:1000px;
+  margin: 0px auto;
+  clear:both;
+}
+
+.container-left {
+  float:left;
+  width:75%;
+}
+.container-right {
+  float:left;
+  width:25%;
+}
+
+
+button {
+    border: 1px solid #000;
+    padding: 3px;
+    color: #000;
+    background-color: #eee;
+}
+button.disabled {
+    border: 1px solid #ddd;
+    padding: 3px;
+    color: #ccc;
+    background-color: #fff;
+}
+button.disabled:hover {
+    background-color: #fff;
+}
+
+.ceo-actions {
+  margin-bottom:20px;
+}
+
+#resoursePanels .resoursePanel {
+    float: left;
+    margin-right: 20px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+#assetsPanels {
+    margin-top: 20px;
+    float: left;
+    clear: left;
+}
+#assetsPanels .assetPanel {
+    float: left;
+    margin-right: 20px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+#messagePanel span {
+    display: block;
+    width: 100%;
+    color: #a70000;
+}
