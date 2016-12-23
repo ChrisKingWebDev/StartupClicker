@@ -34,8 +34,8 @@ class LaunchActions extends Component {
 LaunchActions.propTypes = {
     launchLevel: PropTypes.object,
     nextLaunchLevel: PropTypes.object,
-    tech: PropTypes.string,
-    design: PropTypes.string,
+    tech: PropTypes.number,
+    design: PropTypes.number,
     doLaunchLevel: PropTypes.func.isRequired,
     addMessage: PropTypes.func.isRequired
 };

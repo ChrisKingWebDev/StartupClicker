@@ -69,3 +69,11 @@ button.disabled:hover {
     width: 100%;
     color: #a70000;
 }
+
+
+.at-max {
+  color: orange;
+}
+.over-max {
+  color: red;
+}

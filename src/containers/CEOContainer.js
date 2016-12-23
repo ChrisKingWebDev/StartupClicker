@@ -1,17 +1,28 @@
 import { connect } from "react-redux";
-import { ceoCode, addMessage } from "../actions";
+import { ceoCode, ceoDesign, ceoInvite, addMessage } from "../actions";
 import CEOActions from "../components/CEOActions.react";
 
 const mapStateToProps = (state) => ({
-    codeEnabled: state.ceoCodeEnabled,
+    ceoCodeEnabled: state.ceoCodeEnabled,
+    ceoDesignEnabled: state.ceoDesignEnabled,
+    ceoInviteEnabled: state.ceoInviteEnabled,
     ceoTechPerCode: state.ceoTechPerCode,
     tech: state.tech,
-    serverSpace: state.serverSpace()
+    serverSpace: state.serverSpace(),
+    design: state.design,
+    maxDesign: state.maxDesign(),
+    launchLevel: state.launchLevel
 });
 
 const mapDispatchToProps = (dispatch) => ({
-    doCeoCode: () => {
+    ceoCode: () => {
         dispatch(ceoCode());
+    },
+    ceoDesign: () => {
+        dispatch(ceoDesign());
+    },
+    ceoInvite: () => {
+        dispatch(ceoInvite());
     },
     addMessage: (message) => {
         dispatch(addMessage(message));

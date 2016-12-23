@@ -9,7 +9,7 @@ const tech = (state, action) => {
             if (newTech > state.serverSpace()) {
                 newTech = state.serverSpace();
             }
-            return Object.assign({}, state, {tech: newTech});
+            return Object.assign({}, state, {tech: newTech, ceoCodeEnabled: false});
         case "HIRE_CODER":
             let newCoders = state.coders + 1;
             let newCostPerCoder = state.costPerCoder + ((Math.floor(newCoders / 5) + 1)  * 5);
@@ -39,14 +39,14 @@ const tech = (state, action) => {
 };
 
 const testCeoCode = () => {
-    const stateBefore = {tech: 0, ceoTechPerCode: 1};
+    const stateBefore = {tech: 0, ceoTechPerCode: 1, ceoCodeEnabled: true};
     stateBefore.serverSpace = function() {
         return this.servers * this.techPerServer;
     };
     const action = {
         type: "CEO_CODE"
     };
-    const stateAfter = {tech: 1, ceoTechPerCode: 1};
+    const stateAfter = {tech: 1, ceoTechPerCode: 1, ceoCodeEnabled: false};
     stateAfter.serverSpace = function() {
         return this.servers * this.techPerServer;
     };

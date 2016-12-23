@@ -9,8 +9,11 @@ const launch = (state, action) => {
                     newNextLaunchLevel.label = "Launch Beta";
                     newNextLaunchLevel.tech = 2500;
                     newNextLaunchLevel.design = 2500;
+                    newNextLaunchLevel.level = 3;
             }
-            return Object.assign({}, state, {launchLevel: newLaunchLevel, nextLaunchLevel: newNextLaunchLevel});
+            let newTech = state.tech - state.nextLaunchLevel.tech;
+            let newDesign = state.design - state.nextLaunchLevel.design;
+            return Object.assign({}, state, {launchLevel: newLaunchLevel, nextLaunchLevel: newNextLaunchLevel, tech: newTech, design: newDesign});
         default:
             return state;
     }

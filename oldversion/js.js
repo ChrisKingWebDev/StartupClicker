@@ -50,11 +50,11 @@ var spacePerOffice = 25;
 isAdmin = false;
 isAdmin = true;
 if(isAdmin){
-	//tech = 998;
+	tech = 998;
 	codePerClick = 55;
-	// designPerClick = 1000;
+	designPerClick = 100;
 	// buzzPerClick = 25;
-	// servers = 100;
+	servers = 100;
 	//buzz = 30;
 }
 

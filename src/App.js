@@ -4,7 +4,9 @@ import { primaryGrowth } from "./actions";
 import store from "./index.js";
 
 import CEOContainer from "./containers/CEOContainer";
+import UsersContainer from "./containers/UsersContainer";
 import TechContainer from "./containers/TechContainer";
+import DesignContainer from "./containers/DesignContainer";
 import OfficeContainer from "./containers/OfficeContainer";
 import ServerContainer from "./containers/ServerContainer";
 import MessagesContainer from "./containers/MessagesContainer";
@@ -20,8 +22,10 @@ class App extends Component {
                 <div className="container">
                     <div className="container-left">
                         <CEOContainer />
+                        <UsersContainer />
                         <div id="resoursePanels">
                             <TechContainer />
+                            <DesignContainer />
                         </div>
                         <div id="assetsPanels">
                             <OfficeContainer />

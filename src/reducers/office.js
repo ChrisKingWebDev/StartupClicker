@@ -1,6 +1,3 @@
-import deepFreeze from "deep-freeze";
-import expect from "expect";
-
 const office = (state, action) => {
     switch (action.type) {
         case "UPGRADE_OFFICE":

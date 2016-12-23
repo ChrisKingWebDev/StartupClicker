@@ -10,13 +10,30 @@ export const addMessage = (message) => ({
 export const ceoCode = () => ({
     type: "CEO_CODE"
 });
-export const ceoEnable = () => ({
-    type: "CEO_ENABLE"
+export const ceoCodeEnable = () => ({
+    type: "CEO_CODE_ENABLE"
+});
+export const ceoDesign = () => ({
+    type: "CEO_DESIGN"
+});
+export const ceoDesignEnable = () => ({
+    type: "CEO_DESIGN_ENABLE"
+});
+export const ceoInvite = () => ({
+    type: "CEO_INVITE"
+});
+export const ceoInviteEnable = () => ({
+    type: "CEO_INVITE_ENABLE"
 });
 
 //Coder Actions
 export const hireCoder = () => ({
     type: "HIRE_CODER"
+});
+
+//Designer Actions
+export const hireDesigner = () => ({
+    type: "HIRE_DESIGNER"
 });
 
 //Server Actions
