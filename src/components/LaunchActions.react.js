@@ -1,21 +1,26 @@
 import React, { Component, PropTypes } from "react";
+import {FormattedNumber} from "react-intl";
 
 class LaunchActions extends Component {
     isLaunchEnabled() {
-        return this.props.tech >= this.props.nextLaunchLevel.tech && this.props.design >= this.props.nextLaunchLevel.design;
+        return this.props.tech >= this.props.nextLaunchLevel.tech && this.props.design >= this.props.nextLaunchLevel.design && this.props.buzz >= this.props.nextLaunchLevel.buzz;
     }
     launchLabel() {
-        let label = <span>{this.props.nextLaunchLevel.label}<br/>{this.props.nextLaunchLevel.tech + " Tech"}
-            {(this.props.nextLaunchLevel.design) ? <span><br/> {this.props.nextLaunchLevel.design + " Design"}</span> : ""}
+        let label = <span>
+            {this.props.nextLaunchLevel.label}<br/><FormattedNumber value={this.props.nextLaunchLevel.tech} />{" Tech"}
+            {(this.props.nextLaunchLevel.design) ? <span><br/><FormattedNumber value={this.props.nextLaunchLevel.design} />{" Design"}</span> : "" }
+            {(this.props.nextLaunchLevel.buzz) ? <span><br/><FormattedNumber value={this.props.nextLaunchLevel.buzz} />{" Buzz"}</span> : ""}
         </span>;
         return label;
     }
     clickLaunchLevel(e) {
         e.preventDefault();
         if (this.props.tech < this.props.nextLaunchLevel.tech) {
-            this.props.addMessage("Insufficient Tech");
+            this.props.addErrorMessage("Insufficient Tech");
         } else if (this.props.design < this.props.nextLaunchLevel.design) {
-            this.props.addMessage("Insufficient Design");
+            this.props.addErrorMessage("Insufficient Design");
+        } else if (this.props.buzz < this.props.nextLaunchLevel.buzz) {
+            this.props.addErrorMessage("Insufficient Buzz");
         } else {
             this.props.doLaunchLevel();
         }
@@ -36,8 +41,9 @@ LaunchActions.propTypes = {
     nextLaunchLevel: PropTypes.object,
     tech: PropTypes.number,
     design: PropTypes.number,
+    buzz: PropTypes.number,
     doLaunchLevel: PropTypes.func.isRequired,
-    addMessage: PropTypes.func.isRequired
+    addErrorMessage: PropTypes.func.isRequired
 };
 
 export default LaunchActions;

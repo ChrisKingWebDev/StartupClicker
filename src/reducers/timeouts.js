@@ -1,4 +1,4 @@
-import { ceoCodeEnable, ceoDesignEnable, ceoInviteEnable } from "../actions";
+import { ceoCodeEnable, ceoDesignEnable, ceoMarketingEnable, ceoInviteEnable } from "../actions";
 import store from "../index.js";
 
 const timeouts = (state, action) => {
@@ -24,6 +24,13 @@ const timeouts = (state, action) => {
             return state;
         case "CEO_INVITE_ENABLE":
             return Object.assign({}, state, {ceoInviteEnabled: true});
+        case "CEO_MARKETING":
+            setTimeout(() => {
+                store.dispatch(ceoMarketingEnable());
+            }, state.ceoMarketingDelay);
+            return state;
+        case "CEO_MARKETING_ENABLE":
+            return Object.assign({}, state, {ceoMarketingEnabled: true});
         default:
             return state;
     }

@@ -1,20 +1,21 @@
 import { connect } from "react-redux";
-import { launchLevel, addMessage } from "../actions";
+import { launchLevel, addErrorMessage } from "../actions";
 import LaunchActions from "../components/LaunchActions.react";
 
 const mapStateToProps = (state) => ({
     launchLevel: state.launchLevel,
     nextLaunchLevel: state.nextLaunchLevel,
     tech: state.tech,
-    design: state.design
+    design: state.design,
+    buzz: state.buzz
 });
 
 const mapDispatchToProps = (dispatch) => ({
     doLaunchLevel: () => {
         dispatch(launchLevel());
     },
-    addMessage: (message) => {
-        dispatch(addMessage(message));
+    addErrorMessage: (message) => {
+        dispatch(addErrorMessage(message));
     }
 });
 

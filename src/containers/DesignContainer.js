@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { hireDesigner, addMessage } from "../actions";
+import { hireDesigner, addErrorMessage } from "../actions";
 import DesignActions from "../components/DesignActions.react";
 
 const mapStateToProps = (state) => ({
@@ -16,8 +16,8 @@ const mapDispatchToProps = (dispatch) => ({
     hireDesigner: () => {
         dispatch(hireDesigner());
     },
-    addMessage: (message) => {
-        dispatch(addMessage(message));
+    addErrorMessage: (message) => {
+        dispatch(addErrorMessage(message));
     }
 });
 

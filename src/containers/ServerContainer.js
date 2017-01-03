@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { buyServer, upgradeServers, addMessage } from "../actions";
+import { buyServer, upgradeServers, addErrorMessage } from "../actions";
 import ServerActions from "../components/ServerActions.react";
 
 const mapStateToProps = (state) => ({
@@ -18,8 +18,8 @@ const mapDispatchToProps = (dispatch) => ({
     upgradeServers: () => {
         dispatch(upgradeServers());
     },
-    addMessage: (message) => {
-        dispatch(addMessage(message));
+    addErrorMessage: (message) => {
+        dispatch(addErrorMessage(message));
     }
 });
 

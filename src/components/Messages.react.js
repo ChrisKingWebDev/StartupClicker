@@ -12,7 +12,7 @@ class Messages extends Component {
     renderMessages() {
         return this.props.messages.map((message,index) => {
             return (
-                <span key={`${index}`}>{message}</span>
+                <span key={`${index}`} className={message.class} >{message.message}</span>
             );
         });
     }

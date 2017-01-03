@@ -10,7 +10,7 @@ const design = (state, action) => {
         case "HIRE_DESIGNER":
             let newDesigners = state.designers + 1;
             let newCostPerDesigner = state.costPerDesigner + ((Math.floor(newDesigners / 5) + 1)  * 10);
-            return Object.assign({}, state, {designers: newDesigners, design: state.design - state.costPerDesigner, costPerCoder: newCostPerDesigner});
+            return Object.assign({}, state, {designers: newDesigners, design: state.design - state.costPerDesigner, costPerDesigner: newCostPerDesigner});
         case "PRIMARY_GROWTH":
             newDesign = state.design;
             if (state.design < state.maxDesign()) {

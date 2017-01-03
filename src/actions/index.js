@@ -5,6 +5,10 @@ export const addMessage = (message) => ({
     type: "ADD_MESSAGE",
     message
 });
+export const addErrorMessage = (message) => ({
+    type: "ADD_ERROR_MESSAGE",
+    message
+});
 
 //CEO Actions
 export const ceoCode = () => ({
@@ -25,6 +29,12 @@ export const ceoInvite = () => ({
 export const ceoInviteEnable = () => ({
     type: "CEO_INVITE_ENABLE"
 });
+export const ceoMarketing = () => ({
+    type: "CEO_MARKETING"
+});
+export const ceoMarketingEnable = () => ({
+    type: "CEO_MARKETING_ENABLE"
+});
 
 //Coder Actions
 export const hireCoder = () => ({
@@ -34,6 +44,11 @@ export const hireCoder = () => ({
 //Designer Actions
 export const hireDesigner = () => ({
     type: "HIRE_DESIGNER"
+});
+
+//Marketer Actions
+export const hireMarketer = () => ({
+    type: "HIRE_MARKETER"
 });
 
 //Server Actions
@@ -53,4 +68,23 @@ export const upgradeOffice = () => ({
 //launch
 export const launchLevel = () => ({
     type: "LAUNCH_LEVEL"
+});
+
+//users
+export const toggleUserInvites = () => ({
+    type: "TOGGLE_USER_INVITES"
+});
+
+export const userSignups = (userInvites) => ({
+    type: "USER_SIGNUPS",
+    userInvites
+});
+
+//money
+export const lowerUserPrice = () => ({
+    type: "LOWER_USER_PRICE"
+});
+
+export const raiseUserPrice = () => ({
+    type: "RAISE_USER_PRICE"
 });

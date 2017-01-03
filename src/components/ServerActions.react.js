@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from "react";
+import {FormattedNumber} from "react-intl";
 
 class ServerActions extends Component {
     isBuyDisabled() {
@@ -12,7 +13,7 @@ class ServerActions extends Component {
         if (!this.isBuyDisabled()) {
             this.props.buyServer();
         } else {
-            this.props.addMessage("Insufficient Tech");
+            this.props.addErrorMessage("Insufficient Tech");
         }
     }
     upgradeServersClick(e) {
@@ -20,17 +21,17 @@ class ServerActions extends Component {
         if (!this.isUpgradeDisabled()) {
             this.props.upgradeServers();
         } else {
-            this.props.addMessage("Insufficient Tech");
+            this.props.addErrorMessage("Insufficient Tech");
         }
     }
     render() {
         return (
             <div id="serverPanel" className="assetPanel">
-                <h3>Servers: {this.props.servers}</h3>
-                <button className={ this.isBuyDisabled() ? "disabled" : "" } onClick={this.buyServerClick.bind(this)}>Buy Server: {this.props.serverCost} Tech</button>
-                <h3>Tech Per Server: {this.props.techPerServer}</h3>
-                <button className={ this.isUpgradeDisabled() ? "disabled" : "" } onClick={this.upgradeServersClick.bind(this)}>Upgrade Servers: {this.props.serverUpgradeCost} Tech</button>
-                <h3>Total Server Space: {this.props.serverSpace()}</h3>
+                <h3>Servers: <FormattedNumber value={this.props.servers} /></h3>
+                <button className={ this.isBuyDisabled() ? "disabled" : "" } onClick={this.buyServerClick.bind(this)}>Buy Server: <FormattedNumber value={this.props.serverCost} /> Tech</button>
+                <h3>Tech Per Server: <FormattedNumber value={this.props.techPerServer} /></h3>
+                <button className={ this.isUpgradeDisabled() ? "disabled" : "" } onClick={this.upgradeServersClick.bind(this)}>Upgrade Servers: <FormattedNumber value={this.props.serverUpgradeCost} /> Tech</button>
+                <h3>Total Server Space: <FormattedNumber value={this.props.serverSpace()} /></h3>
             </div>
         );
     }
@@ -45,7 +46,7 @@ ServerActions.propTypes = {
     serverSpace: PropTypes.func,
     buyServer: PropTypes.func.isRequired,
     upgradeServers: PropTypes.func.isRequired,
-    addMessage: PropTypes.func.isRequired
+    addErrorMessage: PropTypes.func.isRequired
 };
 
 export default ServerActions;

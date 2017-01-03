@@ -5,8 +5,10 @@ import store from "./index.js";
 
 import CEOContainer from "./containers/CEOContainer";
 import UsersContainer from "./containers/UsersContainer";
+import MoneyContainer from "./containers/MoneyContainer";
 import TechContainer from "./containers/TechContainer";
 import DesignContainer from "./containers/DesignContainer";
+import BuzzContainer from "./containers/BuzzContainer";
 import OfficeContainer from "./containers/OfficeContainer";
 import ServerContainer from "./containers/ServerContainer";
 import MessagesContainer from "./containers/MessagesContainer";
@@ -21,32 +23,41 @@ class App extends Component {
                 </div>
                 <div className="container">
                     <div className="container-left">
-                        <CEOContainer />
+                        <LaunchContainer />
                         <UsersContainer />
+                        <MoneyContainer />
+                        <MessagesContainer />
+                    </div>
+                    <div className="container-right">
+                        <CEOContainer />
                         <div id="resoursePanels">
                             <TechContainer />
                             <DesignContainer />
+                            <BuzzContainer />
                         </div>
                         <div id="assetsPanels">
                             <OfficeContainer />
                             <ServerContainer />
                         </div>
                     </div>
-                    <div className="container-right">
-                        <LaunchContainer />
-                        <MessagesContainer />
-                    </div>
+                    <div className="clear"></div>
                 </div>
 
 
                 <div className="container" style={{paddingTop: "50px"}}>
+                    Do List:
+                    <ul>
+                    </ul>
                     Ideas:
                     <ul>
                         <li>Upgrade CEO skills</li>
                         <li>Hire other execs</li>
                         <li>Have messages dismiss</li>
                         <li>Improve coder efficiency (maybe have hackathon or bootcamp)</li>
-                        <li>Ability to layoff staff, must be done in groups, maybe 5</li>
+                        <li>Ability to fire staff</li>
+                        <li>Ability to upgrade maxDesign and maxBuzz</li>
+                        <li>Maybe server, etc start to cost money after go live</li>
+                        <li>Increase coder efficiency, etc with more money, intern junior senior, etc.</li>
                     </ul>
                 </div>
             </div>

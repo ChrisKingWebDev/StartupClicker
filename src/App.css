@@ -12,16 +12,27 @@
   width: 100%;
   max-width:1000px;
   margin: 0px auto;
+  padding:0px 10px;
   clear:both;
 }
 
 .container-left {
   float:left;
-  width:75%;
+  width:25%;
+  padding-right:20px;
+  box-sizing: border-box;
 }
 .container-right {
   float:left;
-  width:25%;
+  width:75%;
+}
+
+.clear {
+  clear: both;
+}
+
+h4 {
+  font-size: 10px;
 }
 
 
@@ -44,12 +55,59 @@ button.disabled:hover {
 .ceo-actions {
   margin-bottom:20px;
 }
+.ceo-actions button {
+  margin-right: 5px;
+}
 
+.launch-actions {
+  clear:both;
+  float:left;
+  margin:20px 0px;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+.launch-actions h2 {
+  margin-top: 0px;
+}
+
+#usersPanel {
+    clear:both;
+    float:left;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 0px 0px 20px;
+}
+#usersPanel h3 {
+  float:left;
+  margin: 0px;
+}
+#usersPanel .invites {
+  float:left;
+}
+
+#moneyPanel {
+    clear:both;
+    float:left;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+#resoursePanels {
+  clear: both;
+}
 #resoursePanels .resoursePanel {
     float: left;
     margin-right: 20px;
     border: 1px solid #ccc;
     padding: 5px;
+}
+.resoursePanel h3 {
+  margin-bottom: 5px;
+}
+.resoursePanel h4 {
+  margin-top: 0px;
 }
 
 #assetsPanels {
@@ -64,9 +122,19 @@ button.disabled:hover {
     padding: 5px;
 }
 
+#messagePanel {
+  float: left;
+  clear:both;
+}
+#messagePanel h3 {
+  margin-top: 0px;
+}
 #messagePanel span {
     display: block;
     width: 100%;
+    color: #666;
+}
+#messagePanel span.error {
     color: #a70000;
 }
 
