@@ -44,7 +44,7 @@ class App extends Component {
                 </div>
 
 
-                <div className="container" style={{paddingTop: "50px"}}>
+                <div className="container" style={{paddingTop: "50px", display:"none"}}>
                     Do List:
                     <ul>
                     </ul>
