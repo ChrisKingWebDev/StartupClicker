@@ -2,6 +2,7 @@
   "name": "startup-clicker",
   "version": "0.0.1",
   "private": true,
+  "homepage": "http://chriskingwebdev.github.io/startupclicker",
   "devDependencies": {
     "react-intl": "^2.2.0",
     "react-scripts": "0.6.1",
