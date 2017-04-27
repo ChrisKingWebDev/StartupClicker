@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { lowerUserPrice, raiseUserPrice } from "../actions";
+import { lowerUserPrice, raiseUserPrice, addErrorMessage } from "../actions";
 import Money from "../components/Money.react";
 
 const mapStateToProps = (state) => ({
@@ -14,6 +14,9 @@ const mapDispatchToProps = (dispatch) => ({
     },
     raiseUserPrice: () => {
         dispatch(raiseUserPrice());
+    },
+    addErrorMessage: (message) => {
+        dispatch(addErrorMessage(message));
     }
 });
 
